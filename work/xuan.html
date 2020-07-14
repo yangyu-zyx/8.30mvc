@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: #a3a3a3;
+    }
+
+    .box {
+      width: 465px;
+      height: 283px;
+      border: 1px solid #999999;
+    }
+    .title {
+      height: 50px;
+      border-bottom: 1px solid #999999;
+    }
+    .title-item {
+      float: left;
+      line-height: 50px;
+      width: 50%;
+      text-align: center;
+    }
+    .con {
+      width: 100%;
+      height: 233px;
+      /*background-color: #ef2f06;*/
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="title">
+      <a href="javascript:;" class="title-item" style="background: #00B262; color: white">今日疯抢</a>
+      <a href="javascript:;" class="title-item">量贩装</a>
+    </div>
+    <div class="con">
+      <div class="con-item">
+        <img src="imgs/img1.png" alt="">
+      </div>
+      <div class="con-item">
+        <img src="imgs/img2.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+   window.onload = function () {
+
+     var titleItems = document.querySelectorAll('.title-item');
+     var conItems = document.querySelectorAll('.con-item');
+
+     function manuChange() {
+       for (let i = 0; i < titleItems.length; i++) {
+         titleItems[i].onclick = function () {
+          change(i)
+         }
+       }
+     }
+
+     function change(i){
+       for (let i = 0; i < titleItems.length; i++) {
+         titleItems[i].style.backgroundColor = "#fff";
+         titleItems[i].style.color = "#a3a3a3";
+         conItems[i].style.display = 'none'
+       }
+       titleItems[i].style.backgroundColor = "#00B262";
+       titleItems[i].style.color = "#fff";
+       conItems[i].style.display = 'block'
+     }
+     //手动切换
+     manuChange();
+
+     //自动切换
+     var index = 0;
+     var timer = null;
+     timer = setInterval(function () {
+       index++;
+       if (index>=titleItems.length) {
+         index = 0;
+       }
+       for (let i = 0; i < titleItems.length; i++) {
+         titleItems[i].style.backgroundColor = "#fff";
+         titleItems[i].style.color = "#a3a3a3";
+         conItems[i].style.display = 'none'
+       }
+       titleItems[index].style.backgroundColor = "#00B262";
+       titleItems[index].style.color = "#fff";
+       conItems[index].style.display = 'block'
+       // console.log(index);
+     }, 2000)
+   }
+
+  </script>
+</body>
+</html>
