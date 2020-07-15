@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <a href="" class="swiper-slide" style="background-image: url(img/banner1.jpg);"></a>
+                <a href="" class="swiper-slide" style="background-image: url(img/banner2.jpg);"></a>
+                <a href="" class="swiper-slide" style="background-image: url(img/banner3.jpg);"></a>
+                <a href="" class="swiper-slide" style="background-image: url(img/banner4.jpg);"></a>
+                <a href="" class="swiper-slide" style="background-image: url(img/banner5.jpg);"></a>
+                <a href="" class="swiper-slide" style="background-image: url(img/banner6.jpg);"></a>
+            </div>
+
+            <div class="swiper-pagination">
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.querySelectorAll(".swiper-pagination-bullet")
+        var img = document.querySelectorAll(".swiper-slide")
+        var num = 0;
+        setInterval(function () {
+            num++;
+            if (num > btn.length - 1) {
+                num = 0
+            }
+            for (i = 0; i < btn.length; i++) {
+                img[i].style.display = "none";
+                btn[i].style.background = "#fff";
+            }
+            img[num].style.display = "block";
+            btn[num].style.background = "#2691FD";
+        }, 3000)
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function () {
+                num = i;
+                for (var j = 0; j < img.length; j++) {
+                    img[j].style.display = "none";
+                    btn[j].style.background = "#fff";
+                }
+                img[i].style.display = "block";
+                btn[i].style.background = "#2691FD";
+            }
+        }
+    </script>
+</body>
+
+</html>
