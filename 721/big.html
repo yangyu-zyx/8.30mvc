@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>放大镜</title>
+  <style>
+    .origin {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .small {
+      position: relative;
+
+      width: 450px;
+      height: 450px;
+      /*background-color: #ff8d8d;*/
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 300px;
+      height: 300px;
+      background-color: #fff3a0;
+      opacity: .5;
+
+      cursor: move;
+
+    }
+    .big {
+      position: absolute;
+      top: 0;
+      left: 500px;
+
+      width: 500px;
+      height: 500px;
+      /*background-color: #ff8d8d;*/
+
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+    .bigImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="small">
+      <img class="smallImg" src="imgs/small1.jpg" style="width: 500px; height: 500px;">
+      <div class="mask"></div>
+    </div>
+    <div class="big">
+      <img class="bigImg" src="imgs/big1.jpg">
+    </div>
+  </div>
+  <script>
+    var origin = document.querySelector('.origin');
+    var small = document.querySelector('.small');
+    var big = document.querySelector('.big');
+    var mask = document.querySelector('.mask');
+    //鼠标经过 显示
+    origin.addEventListener('mouseover', function (e) {
+      big.style.display =  'block';
+      mask.style.display = 'block';
+
+
+    })
+    //鼠标出去 隐藏
+    origin.addEventListener('mouseout', function () {
+      big.style.display =  'none';
+      mask.style.display = 'none';
+    })
+
+    origin.addEventListener('mousemove', function (e) {
+      var x = e.pageX - this.offsetLeft;
+      var y = e.pageY - this.offsetTop;
+      //console.log(x, y);
+      var maskX = x - mask.offsetWidth/2;
+      var maskY = y - mask.offsetHeight/2;
+      console.log(x, y);
+      //console.log(origin.offsetWidth - mask.offsetWidth);
+
+      //判断X Y 是否超出边缘
+      //遮挡层的最大移动距离
+      var maskMax = small.offsetWidth - mask.offsetWidth;
+      if (maskX <= 0){
+        maskX = 0;
+      } else if (maskX >= maskMax) {
+        maskX = maskMax;
+      }
+
+      if (maskY <= 0) {
+        maskY = 0;
+      } else if (maskY >= maskMax) {
+        maskY = maskMax;
+      }
+
+      mask.style.left = maskX + 'px';
+      mask.style.top = maskY + 'px';
+
+      //大图片的移动距离 = 遮挡层的移动距离 * 大图片最大移动距离 / 遮挡层的最大移动距离
+      var bigImg = document.querySelector('.bigImg');
+      // 大图片最大移动距离
+      var bigMax = bigImg.offsetWidth - big.offsetWidth;
+      //大图片的移动距离
+      var bigX = maskX * bigMax / maskMax;
+      var bigY = maskY * bigMax / maskMax;
+
+      bigImg.style.left = -bigX + 'px';
+      bigImg.style.top = -bigY + 'px';
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .bo {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-color: rgba(255, 135, 132, 0.28);
+      margin: 100px;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(231, 79, 44, 0.44);
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="bo">
+    <div class="box"></div>
+  </div>
+  <script src="drag/drag.js"></script>
+  <script>
+  var drag = new drag('.box');
+  // drag.y = false;
+  drag.size.x1 =10;
+  drag.size.x2 =100;
+  drag.size.y1 =100;
+  drag.size.y2 =200;
+  drag.move(function () {
+    this.style.width = '300px';
+    this.style.backgroundColor = 'pink';
+  });
+
+
+  </script>
+</body>
+</html>
