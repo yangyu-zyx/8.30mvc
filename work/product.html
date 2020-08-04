@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <title>产品咨询</title>
+    <script sre="index.js"></script>
+    <script sre="animate.js"></script>
+</head>
+<style>
+    .sys{
+        width: 400px;
+       
+        margin: 0 auto;
+        margin-top: 50px;
+        /* background-color:forestgreen; */
+    }
+    .tu{
+        width: 100%;
+    }
+    .tuu{
+        width: 1200px;
+
+        margin: 0 auto;
+    }
+
+</style>
+<body>
+    <!-- 导航栏开始 -->
+    <div class="content">
+        <div class="contentt">
+        <div class="zuoshang"><img class="zuoshangg" src="imgs/1.png" alt=""></div>
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item" >
+                    <a href="index.html" class="active">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="product.html">产品咨询</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shang.html">商学院</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">成功案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">新闻中心</a>
+                </li>
+                <li class="nav-item">
+                    <a href="introduce.html">公司介绍</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html">联系我们</a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="youshang">
+        <div class="lianxi"><img class="you1" src="imgs/2.png" alt="">0755-21006671</div>
+        <div class="search">
+            <input class="you2"type="text" placeholder="输入关键词">
+            <button class="you3"><img class="you3" src="imgs/3.png" alt=""></button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- 导航栏结束 -->
+    <!-- 轮播图开始 -->
+    <div class="window">
+        <div class="box">
+            <a href=""></a>
+            <a href=""></a>
+    
+            <a href=""></a>
+        </div>
+        <ul class="btns">
+            <li></li>
+            <li></li>
+    
+        </ul>
+    </div>
+    <script src="animate.js"></script>
+        <script>
+    
+            //获得窗口的对象，用它来获得每一次轮播的距离
+            var wins = document.getElementsByClassName("window")[0];
+            //获得大的容器的对象
+            var box = document.getElementsByClassName("box")[0];
+            //获取按钮的集合
+            var btns = document.querySelectorAll(".btns li");
+    
+    
+            // 即时完成 
+            //如何获得窗口的大小
+            // console.log(window.innerWidth);
+            // console.log(document.documentElement.clientWidth);
+    
+    
+            //获得轮播的运动长度
+            var winW = parseInt(getComputedStyle(wins, null).width);
+    
+            var num = 0;
+            //运动函数
+            function move() {
+                //每次轮播都要加一
+                num++;
+                //当运动到最后一张的处理逻辑
+                if (num > btns.length - 1) {
+                    //当运动完最后一张，需要即时回到第一张
+                    animate(box, {
+                        "margin-left": -num * winW
+                    }, 300, Tween.Linear, function () {
+                        // num = 0;
+                        box.style.marginLeft = 0;
+                    })
+                    //将位置再回拨到第一张
+                    num = 0;
+                } else {
+                    //除了最后一张的运动方式
+                    animate(box, {
+                        "margin-left": -num * winW
+                    }, 300)
+                }
+    
+                //按钮随着轮播的变化而变化
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].style.background = "#ffffff"
+                }
+                btns[num].style.background = "#0F6FB8";
+    
+            }
+    
+            //每隔3s运动一次
+            var t = setInterval(move, 3000);
+            //按钮轮播
+            //按钮进行切换
+            for (let i = 0; i < btns.length; i++) {
+                //给每个按钮添加事件
+                btns[i].onclick = function () {
+                    num = i;//将当前点击的按钮和轮播的值进行关联
+                    //点击的时候的运动方式
+                    animate(box, {
+                        "margin-left": -num * winW
+                    }, 300)
+    
+                    //按钮点击的时候的变化
+                    for (var j = 0; j < btns.length; j++) {
+                        btns[j].style.background = "#ffffff"
+                    }
+                    btns[num].style.background = "#0F6FB8";
+                }
+            }
+    
+            // 鼠标的移入移出  事件里面最复杂的一个事件
+            //鼠标移入的时候 停止轮播
+            wins.onmouseover = function () {
+                clearInterval(t);
+            }
+            //鼠标离开的时候 继续动画
+            wins.onmouseout = function () {
+                t = setInterval(move, 3000);
+            } 
+        </script>
+         
+     <!-- 轮播图结束 -->
+<div class="sys">
+    <span style="font-size: 30px; font-family:simsun;color: dodgerblue;">IPD集成产品开发系统</span><br>
+    <span style="font-family:simsun;">IPD Integrated Product Development System</span>
+</div>
+<div class="tu">
+    <div class="tuu">
+    <img src="imgs/21.png" alt="">
+    <img src="imgs/22.png" alt="">
+    <img src="imgs/22.png" alt="">
+    <img src="imgs/23.jpg" alt="">
+    <img src="imgs/24.jpg" alt="">
+    <img src="imgs/25.jpg" alt="">
+    <img src="imgs/26.jpg" alt="">
+    <img src="imgs/27.jpg" alt="">
+</div>
+</div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="biao"><img src="imgs/biao.png" alt=""></div>
+    <div class="nav">
+        <ul style="list-style-type: none;color: white;">
+            <li>首页</li>
+            <li>关于远大</li>
+            <li>核心业务</li>
+            <li>成功案例</li>
+            <li>新闻中心</li>
+            <li>联系我们</li>
+        </ul>
+
+    </div>
+    <div class="center">
+        <div class="zuo">
+            <ul>
+                <li style="color: white;"><img src="imgs/zhong1.png">电话：0755-21006671</li>
+                <li style="color: white;"><img src="imgs/zhong2.png">在线咨询(点击咨询)</li>
+                <li style="color: white;"><img src="imgs/zhong3.png">咨询微信：ydflxy</li>
+                <li style="color: white;"><img src="imgs/zhong4.png">咨询QQ:12345678 </li>
+                <li style="color: white;"><img src="imgs/zhong5.png">深圳市远大博商企业有限公司</li>
+            </ul>
+        </div>
+        <div class="zhong"><img style="width: 200px;" src="imgs/ditu.png" alt=""></div>
+        <div class="you">
+            <img  src="imgs/ma.png" alt="">
+            <div>
+            <text style="font-size: 10px;color: white;">微信号：ydflxy</text>
+        </div>
+        </div>
+    </div>
+    <div><span style="font-size: 10px; margin-left: 300px;color: white; ">友情链接:企业管理咨询中心|广州企业品牌商佳旺|塑料排水板</span></div>
+    
+</div>
+<style>
+    .zero{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px; 
+    }
+    </style>
+<div class="zero">
+    <img src="./imgs/top.png" alt="">
+</div>
+    
+<script src="animates.js"></script>
+ <script>
+     var zero=document.querySelector(".zero");
+      //滚动事件
+      window.onscroll = function () {
+            var st = document.documentElement.scrollTop;//获取滚动条位置
+            if (st > 200) {
+                //search.style.top=0;俩种方法设置滚动条
+                animate(zero, {
+                    top: 200
+                }, 300)
+            }
+            else {
+                //search.style.top=-50+"px";俩种方法设置滚动条
+                animate(zero, {
+                    top: 0
+                }, 300)
+            }
+            if (st > 400) {
+                // nav.style.width="50px"
+                // nav.style.height="300px"
+                zero.style.transform = "scale(1,1)";
+                zero.style.opacity = 1;
+            } else {
+                // nav.style.winth="0px"
+                // nav.style.height="0px"
+                zero.style.transform = "scale(0,0)"
+                zero.style.opacity = 0;
+            }
+        }
+
+       
+        zero.onclick = function () {
+            animate(document.documentElement, {
+                scrollTop: 0
+            }, 500)
+        }
+       
+        
+ </script>
+</body>
+</html>

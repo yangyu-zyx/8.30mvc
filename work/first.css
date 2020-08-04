@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    /* height: 5500px; */
+    margin: 0px;
+    /* width: 1920px; */
+
+}
+.content{
+    width: 100%;
+
+}
+.contentt{
+    width: 1320px;
+    height: 100px;
+    margin: 0 auto;
+}
+.zuoshang{
+    width: 180px;
+    height: 60px;
+    /* background-color: red; */
+    float:left;
+    margin-top: 15px;
+    margin-right: 80px;
+    /* margin-left: 200px; */
+    /* background-image: url(imgs/1.png);
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+.zuoshang img{
+    width: 100%;
+    height: 100%;
+}
+.zuoshangg{
+    width: 250px;
+    height: 100px;
+}
+.container{
+    float:left;
+    margin-left: 50px auto;
+    /* background-color: sienna; */
+    height: 100px;
+    margin-right: 80px;
+}
+.nav-item{
+    float: left;
+    width: 100px;
+ 
+  text-align:center; 
+  margin-top: 40px;
+  border-right:1px solid #ebebeb;
+  /* background-color: salmon; */
+}
+.nav-item a{
+    font-family: simsun;
+    text-decoration: none;
+color: black;
+}
+.nav-list{
+    list-style-type: none;
+}
+.youshang{
+    float: left;
+    width: 200px;
+    height: 100px;
+    /* background-color: rosybrown; */
+    /* margin-left: 50px; */
+    /* margin-right: 150px; */
+    
+}
+.lianxi{
+    margin-top: 30px;
+}
+.you1{
+    height: 20px;
+    width: 20px;
+}
+.you2{
+    height: 20px;
+    float: left;
+}
+.you3{
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.you3 img{
+    width: 100%;
+    height: 100%;
+}
+.window {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box {
+    width: 500%;
+    height: 600px;
+}
+
+.box a {
+    float: left;
+    width: 20%;
+    height: 100%;
+    font-size: 50px;
+    text-align: center;
+    line-height: 300px;
+}
+
+.box a:nth-child(1) {
+    background: url(imgs/lunbo11.png);
+}
+
+.box a:nth-child(2) {
+    background: url(imgs/lunbo2.png);
+}
+
+
+
+.box a:nth-child(3) {
+    background:url(imgs/lunbo11.png);
+}
+
+.btns {
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    position: absolute;
+   
+    z-index: 10;
+}
+
+.btns li {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    cursor: pointer;
+    float: left;
+    box-shadow: 0 0 5px #000;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin: 0 5px;
+    
+
+   
+  
+}
+.btns li:nth-child(1) {
+    background-color: #0F6FB8;
+    margin-left: 48.7%;
+}
+/* .banner{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto; */
+    /* min-width: 1920px; */
+/* } */
+/* .container{
+    width: 1320px;
+    height: 500px;
+    margin: 0 auto;
+} */
+/* .lunbo_img{
+    width: 100%;
+
+ 
+} */
+/* 字 */
+/* .zi{
+    width: 100%;
+    height: 100px;
+    float: left;
+margin: 0 auto;
+    background-color: tan;
+    
+
+} */
+.zi ul{
+    width: 100%;
+    height: 100px;
+    float: left;
+    margin: 0 auto;
+    /* background-color: steelblue; */
+  
+    
+
+}
+.zi ul li{
+    width: 30%;
+    height: 70px;
+    float: left;
+   margin-top: 15px;
+   margin-left: 30px;
+   
+    /* background-color: springgreen; */
+    
+    
+}
+/* 左右轮播 */
+.new{
+    width: 100%;
+    height: 600px;
+    margin-top: 100px;
+    background-color: rgb(243, 242, 241);
+    /* min-width: 1920px; */
+}
+.neww{
+    width: 100%;
+    height: 1200px;
+    padding-top: 100px;
+}
+.out_arrow_wheel{
+    width:1100px;
+    height: 350px;
+    margin:0 auto;
+    
+}
+.arrow_wheel{
+    float: left;
+    width:900px;
+    height: 350px;
+    
+    /* background-color:green; */
+    overflow: hidden; 
+}
+.arrow_wheel_box{
+   
+    height: 100%;
+    
+    /* border: 1px solid red; */
+    list-style-type: none;
+   
+}
+
+.arrow_wheel_box li{
+    
+    width: 200px;
+    height: 100%;
+    background-color:#ccc;
+    margin-right: 12px;
+    margin-left: 12px;
+
+    float: left;
+}
+.arrow_wheel_box li a{
+    display: block;
+    border:none;
+    width: 200px;
+    height: 100%;
+    /* border:1px solid red; */
+    margin:auto;
+    /* margin-right: 5px; */
+}
+.arrow_wheel_box li a img{
+    width:200px;
+    height: 350px;
+}
+/* .left:hover,.right:hover{
+    
+
+} */
+.left{
+    float: left;
+    font-size:100px;
+    left: -50px;
+    height: 100%;
+    line-height:260px;
+    cursor: pointer;
+    
+  
+}
+.right{
+    float: left;
+    font-size:100px;
+    right: -50px;
+    height: 100%;
+    line-height:260px;
+    cursor: pointer;
+  
+}  
+.service{
+    width: 100%;
+    margin-top: 100px;
+}
+.servicee{
+    width: 1200px;
+    margin: 0 auto;
+    margin-left: 120px;
+
+}
+.servicee img{
+    width: 500px;
+    margin-right: 20px;
+}
+.product{
+    width: 100%;
+    margin-top: 100px;
+
+}
+.productt{
+    /* border:1px solid #F00; */
+    width: 100%;
+    margin: auto;
+}
+.productt tr{
+    /* border:1px solid #F00; */
+    width: 100%;
+    height: 200px;
+    
+}
+.productt tr td{
+    width: 33%;
+    height: 200px;
+    /* border:1px solid #F00; */
+}
+.productt tr td img{
+    width: 100%;
+    height: 100%;
+}
+.youshi{
+    width: 100%;
+    margin-top: 100px;
+}
+.youshi ul{
+    width: 1000px;
+    margin: 0 auto;
+}
+.youshi ul li{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+}
+.youshi ul li img{
+    width: 100%;
+    height: 100%;
+}
+.zhongjian{
+    width: 1200px;
+    margin: auto;
+}
+.zhongjian img{
+    width: 100%;
+}
+.footer{
+    margin-bottom: 0;
+    background-color: rgb(31, 31, 32);
+    height: 350px;
+    width: 100%;
+
+}
+.biao{
+    height: 50px;
+    width: 120px;
+    padding-top: 30px;
+    margin: 0 auto;
+
+}
+.biao img{
+    height: 100%;
+    width: 100%;
+}
+.nav{
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
+.nav ul{
+    float: left;
+
+}
+.nav ul li{
+    float: left;
+    margin-left: 20px;
+    font-size: 10px;
+}
+.center{
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+}
+.zuo{
+    width: 190px;
+    height: 200px;
+    float: left;
+}
+.zuo ul li{
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+.zuo ul li img{
+    width: 10px;
+    height: 10px;
+}
+.you{
+    float: left;
+}
+.zhong{
+    float: left;
+    margin-right: 50px;
+}
