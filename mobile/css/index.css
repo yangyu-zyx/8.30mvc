@@ -1,0 +1,226 @@
+body{
+    margin: 0;
+    width: 710px;
+}
+header{
+    width: 700px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.zuo{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.zuo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.zhong{
+    width: 170px;
+    height: 50px;
+
+}
+.zhong img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.you{
+    width: 45px;
+    height: 45px;
+}
+.you img{
+    width: 100%;
+    height: 100%;
+}
+.wheel{
+    width: 700px;
+    height: 300px;
+    margin-top: 30px;
+}
+.wheel img{
+    width: 100%;
+    height: 100%;
+}
+.word{
+    width: 700px;
+    /* height: 400px; */
+    margin: auto;
+    margin-top: 30px;
+}
+.word ul li{
+    list-style-type: none;
+    width: 100%;
+    height: 150px;
+    
+    font-size: 30px;
+    font-family: simsun;
+    text-align: center;
+    line-height: 150px;
+
+}
+.new{
+    width: 700px;
+    height: 2300px;
+    background-color: rgb(241, 241, 241);
+
+
+}
+.new-top{
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    /* margin-top: 80px; */
+
+    padding-top: 60px;
+  
+}
+.new-top div{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+}
+.new ul{
+    width: 500px;
+    height:530px;
+    margin: auto;
+    /* background-color: rgb(230, 230, 230); */
+}
+.every{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    list-style-type: none;
+    background-color: rgb(230, 230, 230);
+    /* background-color: cornflowerblue; */
+}
+.tu{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.every img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.zi{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    padding-top: 30px;
+    /* background-color: darkgray; */
+    text-align: center;
+}
+.zi div{
+    margin-bottom: 10px;
+
+}
+.zi div span{
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: simsun;
+    font-size: 25px;
+}
+.new ul li div{
+
+    margin: auto;
+}
+.more{
+    text-align: center;
+    
+}
+.service{
+    width: 700px;
+    height: 1200px;
+}
+.service-tu{
+    width: 600px;
+    height: 900px;
+    margin: auto;
+}
+.tuu{
+    width: 600px;
+    height: 500px;
+    margin-bottom: 30px;
+}
+.tuu img{
+    width: 100%;
+    height: 100%;
+}
+.product{
+    width: 700px;
+    height: 2000px;
+}
+.product-tu{
+    width: 800px;
+    height: 900px;
+    margin: auto;
+}
+.product-tuu{
+    width: 700px;
+    height: 300px;
+    margin: auto;
+    /* margin-bottom: 30px; */
+}
+/* .product-tuu img{
+    width: 100%;
+    height: 100%;
+    
+} */
+.foot{
+    width: 700px;
+    height: 950px;
+    background-color: black;
+}
+.foot-one{
+    width: 650px;
+    height: 400px;
+    padding-top: 50px;
+    /* background-color: violet; */
+
+}
+.foot-one ul li{
+    height: 50px;
+    border-bottom: 1px solid white;
+    font-size: 25px;
+    font-family: simsun;
+    color: white;
+    line-height: 50px;
+}
+.foot-two{
+    width: 500px;
+    height: 200px;
+    /* background-color: wheat; */
+}
+.foot-two ul li{
+    height: 40px;
+list-style-type: none;
+    font-size: 20px;
+    font-family: simsun;
+    color: white;
+    line-height: 40px;
+}
+.foot-three{
+    width: 500px;
+    height: 200px;
+    /* background-color: wheat; */
+}
+.foot-three ul li{
+    height: 40px;
+list-style-type: none;
+    font-size: 20px;
+    font-family: simsun;
+    color: white;
+    line-height: 40px;
+}
+
