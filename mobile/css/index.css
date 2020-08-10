@@ -4,16 +4,16 @@ body{
 }
 header{
     width: 100%;
-    height: 50px;
+    height: 3rem;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 
 }
 .zuo{
-    width: 50px;
-    height: 50px;
+    width: 2rem;
+    height: 2rem;
     position: relative;
 }
 .zuo img{
@@ -21,9 +21,48 @@ header{
     width: 100%;
     height: 100%;
 }
+.list{
+    height: 50rem;
+    width: 20rem;
+    background: rgb(66, 104, 207);;
+    position: absolute;
+    top: -0.49rem;
+    left: -0.5rem;
+    display: none;
+    z-index: 999;
+}
+.nav{
+    height: 50rem;
+    width: 10rem;
+    background:  rgb(66, 104, 207);;
+    float: left;
+}
+.ex{
+    height:50rem;
+    width: 50rem;
+    float: left;
+    /* background-color: rgb(221, 40, 197); */
+}
+
+.navv{
+    height: 20rem;
+    width: 100%;
+    /* border-top:0.0005rem solid black ;
+    border-bottom: 0.0005rem solid black; */
+    margin-top: 0.4rem;
+}
+.navv li{
+    height: 5rem;
+    width: 100%;
+    /* border-bottom: 0.0005rem solid black; */
+    font-size: 1rem;
+    text-align: center;
+    line-height: 5rem;
+    color: white;
+}
 .zhong{
-    width: 170px;
-    height: 50px;
+    width: 5rem;
+    height: 2rem;
 
 }
 .zhong img{
@@ -32,8 +71,8 @@ header{
     height: 100%;
 }
 .you{
-    width: 45px;
-    height: 45px;
+    width: 2rem;
+    height: 2rem;
 }
 .you img{
     width: 100%;
@@ -41,18 +80,18 @@ header{
 }
 .wheel{
     width: 100%;
-    height: 300px;
-    margin-top: 30px;
+    height: 15rem;
+    margin-top: 0.3rem;
 }
 .wheel img{
     width: 100%;
     height: 100%;
 }
 .word{
-    width: 700px;
+    width: 95%;
     /* height: 400px; */
     margin: auto;
-    margin-top: 30px;
+    margin-top: 0.3rem;
 }
 .word ul li{
     list-style-type: none;
@@ -73,7 +112,7 @@ header{
 
 }
 .new-top{
-    width: 300px;
+    width: 45%;
     height: 100px;
     margin: auto;
     /* margin-top: 80px; */
@@ -88,13 +127,13 @@ header{
     margin: auto;
 }
 .new ul{
-    width: 500px;
+    width: 75%;
     height:530px;
     margin: auto;
     /* background-color: rgb(230, 230, 230); */
 }
 .every{
-    width: 500px;
+    width: 90%;
     height: 500px;
     margin: auto;
     margin-top: 30px;
@@ -113,7 +152,7 @@ header{
     margin: auto;
 }
 .zi{
-    width: 500px;
+    width: 90%;
     height: 200px;
     margin: auto;
     padding-top: 30px;
@@ -141,17 +180,18 @@ header{
 }
 .service{
     width: 100%;
-    height: 1200px;
+    height: 60rem;
 }
 .service-tu{
-    width: 600px;
-    height: 900px;
+    width: 95%;
+    height: 50rem;
     margin: auto;
 }
 .tuu{
-    width: 600px;
-    height: 500px;
-    margin-bottom: 30px;
+    width: 95%;
+    height: 25rem;
+    /* margin-bottom: rem; */
+    margin: auto;
 }
 .tuu img{
     width: 100%;
@@ -159,31 +199,31 @@ header{
 }
 .product{
     width: 100%;
-    height: 2000px;
+    height: 1650px;
 }
 .product-tu{
-    width: 800px;
+    width: 100%;
     height: 900px;
     margin: auto;
 }
 .product-tuu{
-    width: 700px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     margin: auto;
     /* margin-bottom: 30px; */
 }
-/* .product-tuu img{
+.product-tuu img{
     width: 100%;
     height: 100%;
     
-} */
+}
 .foot{
     width: 100%;
     height: 950px;
     background-color: black;
 }
 .foot-one{
-    width: 650px;
+    width: 95%;
     height: 400px;
     padding-top: 50px;
     /* background-color: violet; */

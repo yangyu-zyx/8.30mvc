@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/zepto.js"></script>
+    <script src="js/hammer.js"></script>
+    <script src="js/jquery-hammer.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="css/adapter.css"> -->
+
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
         <div class="zuo">
-            <img src="imgs/zuo.png" alt="">
+            <img src="imgs/zuo.png" >
+            <!-- <img src="imgs/zuo.png" data-hammer="[object Object]"style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); display: block;"> -->
+            <div class="list" style="display: none;">
+                <div class="nav">                 
+                    <ul class="navv">
+                        <li>首页</li>
+                        <li>咨询产品</li>
+                        <li>商学院</li>
+                        <li>成功案例</li>
+                        <li>新闻中心</li>
+                        <li>公司介绍</li>
+                        <li>联系方式</li>
+                    </ul>
+                </div>
+                <!-- <div class="ex" data-hammer="[object Object]"style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div> -->
+                <!-- <div class="ex"></div> -->
+        </div>
+        <div class="ex"></div>
+    </div>
         </div>
         <div class="zhong">
             <img src="imgs/zhong.png" alt="">
@@ -19,9 +48,40 @@
         </div>
     </header>
     <!-- 轮播图 -->
-    <div class="wheel">
+    <!-- <div class="wheel">
         <img src="imgs/wheel1.png" alt="">
+    </div> -->
+    <div class="wheel">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="imgs/wheel1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="imgs/wheel2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="imgs/wheel3.png" alt="">
+
+            </div>
+        </div>
+        <!-- 分页器 -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
+    <script>
+        var mySwiper = new Swiper ('.wheel',{
+            direction: 'horizontal',//垂直切换选项
+            loop: true,//循环模式选择
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+                }
+            //如果需要分页器
+            // pagination:{
+            //     el: '.swiper-pagination',
+            // }
+        })
+    </script>
     <!-- 字 -->
     <div class="word">
         <ul>
