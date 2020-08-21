@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {foreach $data as $v}
+    <ul>
+        <li>姓名：{$v['name']}</li>
+        <li>年龄：{$v['age']}</li>
+        <li>
+            性别：
+            {if $v['sex'] == 'nan' }
+            男
+            {else}
+            女
+            {/if}
+        </li>
+
+
+    </ul>
+    {/foreach}
+    <a href="index.php/teacher/teacher/add">添加日志</a>
+</body>
+</html>
