@@ -1,0 +1,23 @@
+body {
+    background: url("../../img/timg.jpg") no-repeat;
+    background-size: cover;
+}
+.form-horizontal {
+    background-color: rgba(147, 197, 250, .3);
+    width: 550px;
+    height: 400px;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.form-horizontal h1{
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+}
