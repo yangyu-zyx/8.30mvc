@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="{CSS_ADD}index/index.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{IMG_ADD}logo.png" alt="佳速">
+        <h3>更好更快的互联网开发服务商</h3>
+    </div>
+    <ul class="menu">
+        <li>
+            <a href="">首页</a>
+        </li>
+        {foreach $menuData as $v}
+        <li>
+            <a href="">{$v["cname"]}</a>
+            {if isset($v["child"])}
+            <ul class="son">
+                {foreach $v["child] as $v1}
+                <li>
+                    <a href="">{$v1["cname]}</a>
+                </li>
+                {/foreach}
+            </ul>
+            {/if}
+        </li>
+        {/foreach}
+    </ul>
+</header>
+<div class="swiper">
+    <img src="{IMG_ADD}swip.jpg" alt="">
+</div>
+</body>
+</html>

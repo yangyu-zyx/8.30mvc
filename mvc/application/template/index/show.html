@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+    <style>
+        .list-box {
+            width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+{include file=$header}
+<div class="list-box">
+    <h1>{$condata["ctitle"]}</h1>
+    <p>{$condata["conts"]}</p>
+</div>
+{include file=$footer}
+</body>
+</html>

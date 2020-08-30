@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #555;
+        }
+        .list-box {
+            width: 1000px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+{include file=$header}
+    <div class="list-box">
+        <ul>
+            {foreach $condata as $v}
+            <li><a href="/htdocs/mvc/index.php/index/show?conid={$v['conid']}">{$v["ctitle"]}</a></li>
+            {/foreach}
+        </ul>
+    </div>
+{include file=$footer}
+</body>
+</html>

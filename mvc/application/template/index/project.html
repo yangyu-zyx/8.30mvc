@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方案</title>
+    <style>
+        .lists-box {
+            width: 1000px;
+            background-color: #fff;
+            margin: 10px auto;
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+        .list-content {
+            width: 800px;
+            margin: auto;
+        }
+        .list {
+            float: left;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+        .list a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #555;
+        }
+        .list {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+{include file=$header}
+    <ul class="lists-box">
+        <div class="list-content">
+            {foreach $sonInfo as $v}
+            <li class="list">
+                <a href="/htdocs/mvc/index.php/index/lists?cid={$v['cid']}">
+                    <img src="{$v['imgurl']}" alt="">
+                    <h3>{$v["cname"]}</h3>
+                    <div>{$v["info"]}</div>
+                </a>
+            </li>
+            {/foreach}
+            <div style="clear: both"></div>
+        </div>
+    </ul>
+{include file=$footer}
+</body>
+</html>

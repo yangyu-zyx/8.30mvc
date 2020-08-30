@@ -5,7 +5,12 @@
     <title>LYZ后台管理系统</title>
     <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
     <link rel="stylesheet" href="{CSS_ADD}admin/login.css">
+    <script src="{JS_ADD}jquery-3.4.1.min.js"></script>
+    <script src="{JS_ADD}jquery.validate.js"></script>
     <script src="{JS_ADD}admin.js"></script>
+    <script>
+        // document.cookie="name=lyz";
+    </script>
 </head>
 <body>
     <form class="form-horizontal" action="http://localhost:8888/htdocs/mvc/index.php/admin/index/login/" method="post">
@@ -23,6 +28,14 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="code" class="col-sm-2 control-label">验证码</label>
+            <div class="col-sm-10">
+                <input type="text" placeholder="请输入验证码" id="code" name="code">
+                <img src="http://localhost:8888/htdocs/mvc/index.php/admin/index/mycode" alt="" onclick="this.src='http://localhost:8888/htdocs/mvc/index.php/admin/index/mycode?'+Math.random()" style="cursor: pointer;width: 120px">
+                看不清楚？点击切换
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                     <label>
@@ -35,7 +48,7 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">登陆</button>
                 &nbsp;&nbsp;没有账号？请
-                <a href="http://localhost:8888/htdocs/mvc/index.php/admin/reg/add" class="btn btn-default">注册</a>
+                <a href="http://localhost:8888/htdocs/mvc/index.php/admin/reg/add">注册</a>
             </div>
         </div>
     </form>

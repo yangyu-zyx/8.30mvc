@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-08-21 09:13:34
+/* Smarty version 3.1.34-dev-7, created on 2020-08-23 07:43:31
   from '/Applications/MAMP/htdocs/htdocs/mvc/application/template/admin/reg.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f3f903ea73c99_30235354',
+  'unifunc' => 'content_5f421e23e3e374_46800628',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '48fc7eabb28072ccf2aed8be8f082fb04bf04e01' => 
     array (
       0 => '/Applications/MAMP/htdocs/htdocs/mvc/application/template/admin/reg.html',
-      1 => 1598001213,
+      1 => 1598168519,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f3f903ea73c99_30235354 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f421e23e3e374_46800628 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,15 @@ admin/bootstrap.css">
 admin/login.css">
     <?php echo '<script'; ?>
  src="<?php echo JS_ADD;?>
-admin.js"><?php echo '</script'; ?>
+jquery-3.4.1.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+jquery.validate.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo JS_ADD;?>
+reg.js"><?php echo '</script'; ?>
 >
 </head>
 <body>
@@ -45,15 +53,15 @@ admin.js"><?php echo '</script'; ?>
             </div>
         </div>
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+            <label for="pwd" class="col-sm-2 control-label">密码</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="密码" name="pwd">
+                <input type="password" class="form-control" id="pwd" placeholder="密码" name="pwd">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputPassword4" class="col-sm-2 control-label">确认密码</label>
+            <label for="pwd1" class="col-sm-2 control-label">确认密码</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword4" placeholder="确认密码" name="pwd1">
+                <input type="password" class="form-control" id="pwd1" placeholder="确认密码" name="pwd1">
             </div>
         </div>
         <div class="form-group">

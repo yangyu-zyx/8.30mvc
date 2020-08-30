@@ -40,16 +40,16 @@ class route {
                         $method = self::$a;
                         $obj -> $method();
                     }else {
-                        die('this action not exists');
+                        die(self::$a.' action not exists');
                     }
                 }else {
-                    die("this class file not exists");
+                    die(self::$c." class file not exists");
                 }
             }else {
-                die('this class file not exists');
+                die(self::$c.' class file not exists');
             }
         }else {
-            die("this module not exists");
+            die(self::$m." module not exists");
         }
     }
 }

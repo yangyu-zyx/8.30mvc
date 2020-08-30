@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>editone</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+    <script src="{JS_ADD}jquery-3.4.1.min.js"></script>
+    <script src="{JS_ADD}addcon.js"></script>
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="/htdocs/mvc/index.php/admin/content/editone" method="post">
+        <div class="form-group">
+            <label for="cid">所属栏目</label>
+            <select id="cid" name="cid" cid="{$data['cid']}" class="form-control">
+            </select>
+        </div>
+        <input type="hidden" name="conid" value="{$data['conid']}">
+        <div class="form-group">
+            <label for="ctitle">内容标题</label>
+            <input type="text" class="form-control" id="ctitle" name="ctitle" value="{$data['ctitle']}">
+        </div>
+        <div class="form-group">
+            <label for="cons">内容主题</label>
+            <textarea id="cons" name="conts" class="form-control" rows="3">{$data['conts']}</textarea>
+        </div>
+        <button type="submit" class="btn btn-default">修改</button>
+    </form>
+</div>
+</body>
+</html>

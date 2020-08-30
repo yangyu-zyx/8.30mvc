@@ -43,13 +43,28 @@ define("JS_ADD", STATIC_ADD."js".DIRECTORY_SEPARATOR);
 define("IMG_ADD", STATIC_ADD."img".DIRECTORY_SEPARATOR);
 //font地址
 define("FONT_ADD", STATIC_ADD."font".DIRECTORY_SEPARATOR);
+//font本地路径
+define("FONT_PATH", APP_NAME."static/font");
 
+//配置项
+$config = include_once APP_NAME."config.php";
 //include_once "engine.class.php";
 include_once "smarty/Smarty.class.php";
 //路由
 include_once "route.class.php";
+//主函数
+//include_once "main.class.php";
+//验证码
 
 
+function auto($classname) {
+//    echo MAIN_PATH.str_replace("\\", DIRECTORY_SEPARATOR, $classname).".class.php";
+    include_once MAIN_PATH.str_replace("\\", DIRECTORY_SEPARATOR, $classname).".class.php";
+}
+//类自动加载
+spl_autoload_register("auto");
 $route = new \libs\route();
 $route->run();
+
+//echo $_COOKIE['name'];
 

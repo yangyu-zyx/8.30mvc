@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('content-type:text/html;charset=utf-8');
 //用来记录入口指令
 define("MVC", true);

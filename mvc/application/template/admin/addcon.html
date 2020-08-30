@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>content</title>
+    <link rel="stylesheet" href="{CSS_ADD}admin/bootstrap.css">
+    <link rel="stylesheet" href="{CSS_ADD}admin/addcon.css">
+    <script src="{JS_ADD}jquery-3.4.1.min.js"></script>
+    <script src="{JS_ADD}addcon.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="/htdocs/mvc/index.php/admin/content/addcon" method="post">
+        <div class="form-group">
+            <label for="cid">所属栏目</label>
+            <select id="cid" name="cid" class="form-control">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ctitle">内容标题</label>
+            <input type="text" class="form-control" id="ctitle" name="ctitle" placeholder="输入标题">
+        </div>
+        <div class="form-group">
+            <label for="cons">内容主题</label>
+            <textarea id="cons" name="conts" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">添加</button>
+    </form>
+    </div>
+</body>
+</html>
